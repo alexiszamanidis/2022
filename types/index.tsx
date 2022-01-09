@@ -5,6 +5,14 @@ export interface Contact {
     link: string;
 }
 
+export interface Education {
+    university: string;
+    duration: string;
+    description: string;
+    location: string;
+    link: string;
+}
+
 export interface Experience {
     from: string;
     to: string;

@@ -1,4 +1,4 @@
-import { Contact, Experience } from "../types";
+import { Contact, Education, Experience } from "../types";
 import { HiPhone, HiMail } from "react-icons/hi";
 
 export const HEAD_TITLE = "Alexis Zamanidis";
@@ -33,6 +33,17 @@ export const contact: Contact[] = [
         title: "Email",
         value: "alexiszamanidis@outlook.com",
         link: "mailto:alexiszamanidis@outlook.com",
+    },
+];
+
+export const education: Education[] = [
+    {
+        university: "National & Kapodistrian University of Athens",
+        duration: "Oct 2016 - Feb 2021",
+        description:
+            "B.Sc. in Computer Science - Specializations: Software, Data & Knowledge Management.",
+        location: "Athens, Greece",
+        link: "https://www.di.uoa.gr/",
     },
 ];
 
