@@ -29,6 +29,9 @@ jobs:
               env:
                   NEXT_PUBLIC_BASE_PATH: /new-portfolio
             - run: yarn export
+
+            - run: touch ./out/.nojekyll
+
               # TODO: remove this env
               env:
                   NEXT_PUBLIC_BASE_PATH: /new-portfolio
