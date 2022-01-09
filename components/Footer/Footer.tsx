@@ -1,14 +1,14 @@
-import { contactData } from "../../constants";
+import { contact } from "../../constants";
 
 const Footer = () => {
     return (
         <div>
-            {contactData.map((contact, index) => (
+            {contact.map((contactItem, index) => (
                 <div key={index}>
-                    <div>{contact.icon}</div>
-                    <div>{contact.title}</div>
-                    <div>{contact.value}</div>
-                    <div>{contact.link}</div>
+                    <div>{contactItem.icon}</div>
+                    <div>{contactItem.title}</div>
+                    <div>{contactItem.value}</div>
+                    <div>{contactItem.link}</div>
                 </div>
             ))}
         </div>
