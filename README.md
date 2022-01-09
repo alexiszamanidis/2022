@@ -6,4 +6,5 @@ A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Comp
 
 | Path                | Description                          |
 | ------------------- | ------------------------------------ |
+| public/favicon.ico  | Favicon icon                         |
 | constants/index.tsx | Contains the data that are displayed |
