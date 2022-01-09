@@ -2,6 +2,7 @@ import Head from "next/head";
 import { ReactNode } from "react";
 import Footer from "../Footer";
 import { HEAD_TITLE, HEAD_DESCRIPTION, HEAD_KEYWORDS } from "../../constants";
+import favicon from "../../public/favicon.ico";
 
 interface LayoutProps {
     title?: string;
@@ -24,6 +25,7 @@ const Layout = ({
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keyword" content={keywords} />
+                <link rel="shortcut icon" href={favicon.src} />
             </Head>
             <div>{children}</div>
             {footer && <Footer />}
