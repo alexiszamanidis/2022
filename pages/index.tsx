@@ -8,7 +8,7 @@ const Title = styled.h1`
     font-size: 50px;
 `;
 
-export default function Home() {
+const Home = () => {
     return (
         <div>
             <FaGithub />
@@ -17,4 +17,6 @@ export default function Home() {
             <Title>My page</Title>;
         </div>
     );
-}
+};
+
+export default Home;
