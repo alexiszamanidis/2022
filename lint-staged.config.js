@@ -6,6 +6,7 @@ module.exports = {
     "**/*.(ts|tsx|js)": (filenames) => [
         `yarn eslint --fix ${filenames.join(" ")}`,
         `yarn prettier --write ${filenames.join(" ")}`,
+        "jest --watchAll=false --findRelatedTests='__tests__' --bail",
     ],
 
     // Format MarkDown and JSON
