@@ -1,5 +1,7 @@
-import { Contact, Education, Experience } from "../types";
+import { BsFileTextFill } from "react-icons/bs";
 import { HiPhone, HiMail } from "react-icons/hi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Contact, Education, Experience, Cv, Social } from "../types";
 
 export const HEAD_TITLE = "Alexis Zamanidis";
 export const HEAD_DESCRIPTION =
@@ -19,6 +21,22 @@ export const passionateAbout = [
     "Web Development",
     "Machine Learning - Data Mining",
     "Parallel Programming",
+];
+
+export const cv: Cv = {
+    icon: <BsFileTextFill />,
+    link: "https://drive.google.com/uc?id=1gqb_C5kko846r6uYC7grd1VRfaSxjwuG",
+};
+
+export const social: Social[] = [
+    {
+        icon: <FaGithub />,
+        link: "https://github.com/alexiszamanidis",
+    },
+    {
+        icon: <FaLinkedin />,
+        link: "http://linkedin.com/in/alexiszamanidis",
+    },
 ];
 
 export const contact: Contact[] = [

@@ -5,6 +5,16 @@ export interface Contact {
     link: string;
 }
 
+export interface Cv {
+    icon: JSX.Element;
+    link: string;
+}
+
+export interface Social {
+    icon: JSX.Element;
+    link: string;
+}
+
 export interface Education {
     university: string;
     duration: string;

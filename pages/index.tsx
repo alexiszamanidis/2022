@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { BsFileTextFill } from "react-icons/bs";
-import { fullName, summary, passionateAbout } from "../constants";
+import { fullName, summary, passionateAbout, cv, social } from "../constants";
 import Layout from "../components/Layout";
 
 const Title = styled.div`
@@ -13,11 +11,18 @@ const Title = styled.div`
 const Home = () => {
     return (
         <Layout>
-            <FaGithub />
-            <FaLinkedin />
-            <BsFileTextFill />
             <Title>{fullName}</Title>
             <Title>{summary}</Title>
+            <div>
+                <div>{cv.icon}</div>
+                <div>{cv.link}</div>
+            </div>
+            {social.map((socialItem, index) => (
+                <div key={index}>
+                    <div>{socialItem.icon}</div>
+                    <div>{socialItem.link}</div>
+                </div>
+            ))}
             {passionateAbout.map((passionAboutItem, index) => (
                 <div key={index}>{passionAboutItem}</div>
             ))}
