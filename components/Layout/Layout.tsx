@@ -22,10 +22,20 @@ const Layout = ({
     return (
         <div>
             <Head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="author" content="Alexis Zamanidis" />
+                {/* TODO: change this to https://alexiszamanidis.github.io/ */}
+                <link rel="canonical" href="https://alexiszamanidis.github.io/new-portfolio" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keyword" content={keywords} />
                 <link rel="shortcut icon" href={favicon.src} />
+                {/* TODO: uncomment google-site-verification */}
+                {/* <meta
+                    name="google-site-verification"
+                    content="fHkyo6DFEHMvAkHhDLMuFgCqGXccs-g_uB_LetyObyU"
+                /> */}
             </Head>
             <div>{children}</div>
             {footer && <Footer />}

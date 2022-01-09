@@ -22,8 +22,16 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "yarn"
             - run: yarn
-            - run: yarn build
+
+            - name: Build my App
+              run: yarn build
+              # TODO: remove this env
+              env:
+                  NEXT_PUBLIC_BASE_PATH: /new-portfolio
             - run: yarn export
+              # TODO: remove this env
+              env:
+                  NEXT_PUBLIC_BASE_PATH: /new-portfolio
             - run: yarn test -- --watchAll=false
 
             - name: Set Actions Allow Unsecure Commands
