@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFileTextFill } from "react-icons/bs";
+import Footer from "../components/Footer";
 
 const Title = styled.h1`
     color: red;
@@ -14,7 +15,8 @@ const Home = () => {
             <FaGithub />
             <FaLinkedin />
             <BsFileTextFill />
-            <Title>My page</Title>;
+            <Title>My page</Title>
+            <Footer />
         </div>
     );
 };
