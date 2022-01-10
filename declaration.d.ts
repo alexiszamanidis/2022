@@ -12,6 +12,7 @@ declare module "styled-components" {
                 main: string;
             };
             whites: ColorPalette;
+            blacks: ColorPalette;
         };
         breakpoints: {
             sm: string;

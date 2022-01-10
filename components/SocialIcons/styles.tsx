@@ -15,7 +15,7 @@ export const SocialIcon = styled.a`
     border-radius: 50%;
     padding: 10px;
     &:hover {
-        background-color: ${(props) => props.theme.colors.whites[400]};
+        background-color: ${(props) => props.theme.colors.whites[200]};
         transform: scale(1.2);
         cursor: pointer;
     }
