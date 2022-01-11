@@ -29,3 +29,23 @@ export const StyledIcon = styled(SiReact)`
         font-size: 3rem;
     }
 `;
+
+export const TabsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+`;
+
+export const Tab = styled.div`
+    font-size: 2rem;
+    line-height: 32px;
+    color: ${(props) => props.theme.colors.whites[700]};
+    transition: 0.4s ease;
+    &:hover {
+        color: ${(props) => props.theme.colors.whites[1000]};
+        opacity: 1;
+        cursor: pointer;
+    }
+`;

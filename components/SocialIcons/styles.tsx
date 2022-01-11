@@ -18,13 +18,14 @@ export const SocialIcon = styled.a`
         transform: scale(1.2);
         cursor: pointer;
     }
-    font-size: 6rem;
+    font-size: 5rem;
 
     @media ${(props) => props.theme.breakpoints.lg} {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     @media ${(props) => props.theme.breakpoints.sm} {
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 2px;
     }
 `;
