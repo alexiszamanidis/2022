@@ -6,8 +6,11 @@ const defaultTheme: DefaultTheme = {
     },
     colors: {
         primary: {
-            background: "#0e1217",
+            background: "#0E1217",
             main: "#fff",
+        },
+        secondary: {
+            background: "#17191f",
         },
         whites: {
             100: "rgba(255, 255, 255, 0.1)",

@@ -11,6 +11,9 @@ declare module "styled-components" {
                 background: string;
                 main: string;
             };
+            secondary: {
+                background: string;
+            };
             whites: ColorPalette;
             blacks: ColorPalette;
         };
