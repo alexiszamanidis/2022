@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0px auto;
 
     @media ${(props) => props.theme.breakpoints.lg} {
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
         line-height: 56px;
         margin-bottom: 12px;
         padding: 40px 0 12px;
-        max-width: 600px;
+        max-width: 650px;
     }
 
     @media ${(props) => props.theme.breakpoints.sm} {
@@ -19,7 +19,6 @@ export const Wrapper = styled.div`
         line-height: 32px;
         margin-bottom: 8px;
         padding: 16px 0 8px;
-        max-width: 100%;
         max-width: 300px;
     }
 `;

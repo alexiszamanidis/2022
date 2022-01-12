@@ -5,7 +5,7 @@ const SocialIcons = () => {
     return (
         <Wrapper>
             {social.map((socialItem, index) => (
-                <SocialIcon key={index} target="_blank" href={socialItem.link}>
+                <SocialIcon key={index} target="_blank" rel="noopener" href={socialItem.link}>
                     {socialItem.icon}
                 </SocialIcon>
             ))}

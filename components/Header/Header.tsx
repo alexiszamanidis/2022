@@ -1,4 +1,3 @@
-import SocialIcons from "../SocialIcons";
 import { Wrapper, StyledIcon, TabsWrapper, Tab } from "./styles";
 
 const Header = () => {
@@ -7,10 +6,9 @@ const Header = () => {
             <StyledIcon />
             {/* TODO: tabs(personal, portfolio) + contexts */}
             <TabsWrapper>
-                <Tab>Personal</Tab>
-                <Tab>Portfolio</Tab>
+                <Tab active>PERSONAL</Tab>
+                <Tab>PORTFOLIO</Tab>
             </TabsWrapper>
-            <SocialIcons />
         </Wrapper>
     );
 };

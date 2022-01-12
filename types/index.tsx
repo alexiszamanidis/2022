@@ -12,6 +12,7 @@ export interface Cv {
 
 export interface Social {
     icon: JSX.Element;
+    title: string;
     link: string;
 }
 

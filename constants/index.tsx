@@ -31,10 +31,12 @@ export const cv: Cv = {
 export const social: Social[] = [
     {
         icon: <FaGithub />,
+        title: "GitHub",
         link: "https://github.com/alexiszamanidis",
     },
     {
         icon: <FaLinkedin />,
+        title: "LinkedIn",
         link: "http://linkedin.com/in/alexiszamanidis",
     },
 ];
