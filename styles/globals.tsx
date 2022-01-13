@@ -25,6 +25,19 @@ ${normalize};
   li{
     list-style: none;
   }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px ${(props) => props.theme.colors.whites[200]}; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.secondary.background};
+    border-radius: 10px;
+    border: 1px solid ${(props) => props.theme.colors.whites[500]}
+  }
 `;
 
 export default GlobalStyles;
