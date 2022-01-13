@@ -1,13 +1,28 @@
+import { useTabsContext } from "../../contexts/TabsContext";
 import { Wrapper, StyledIcon, TabsWrapper, Tab } from "./styles";
 
 const Header = () => {
+    const { tabs, activeTab, setActiveTab } = useTabsContext();
+
+    const onTabClick = (tabValue: number) => () => {
+        setActiveTab(tabValue);
+    };
+
     return (
         <Wrapper>
             <StyledIcon />
-            {/* TODO: tabs(personal, portfolio) + contexts */}
             <TabsWrapper>
-                <Tab active>PERSONAL</Tab>
-                <Tab>PORTFOLIO</Tab>
+                {tabs.map((tab) => {
+                    return (
+                        <Tab
+                            key={tab.id}
+                            active={tab.id === activeTab}
+                            onClick={onTabClick(tab.id)}
+                        >
+                            {tab.title}
+                        </Tab>
+                    );
+                })}
             </TabsWrapper>
         </Wrapper>
     );
