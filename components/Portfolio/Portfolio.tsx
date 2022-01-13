@@ -1,5 +1,7 @@
+import { FadeIn } from "../Styles";
+
 const Portfolio = () => {
-    return <div>Portfolio</div>;
+    return <FadeIn>Portfolio</FadeIn>;
 };
 
 export default Portfolio;
