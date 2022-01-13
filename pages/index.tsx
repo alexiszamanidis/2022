@@ -1,19 +1,18 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { passionateAbout } from "../constants";
 import Header from "../components/Header/Header";
-import HeroSection from "../components/HeroSection";
-import Timeline from "../components/Timeline";
+import Personal from "../components/Personal";
+import Portfolio from "../components/Portfolio";
+import { useTabsContext } from "../contexts/TabsContext";
 
 const Home = () => {
+    const { activeTab } = useTabsContext();
+
     return (
         <Layout>
             <Header />
-            <HeroSection />
-            <Timeline />
-            {passionateAbout.map((passionAboutItem, index) => (
-                <div key={index}>{passionAboutItem}</div>
-            ))}
+            {activeTab === 1 && <Personal />}
+            {activeTab === 2 && <Portfolio />}
         </Layout>
     );
 };
