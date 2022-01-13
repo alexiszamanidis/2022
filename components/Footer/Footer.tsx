@@ -1,30 +1,41 @@
-import { contact, social } from "../../constants";
 import SocialIcons from "../SocialIcons";
+import { contact } from "../../constants";
+import {
+    CompanyContainer,
+    Wrapper,
+    LinkColumn,
+    LinkItem,
+    LinkList,
+    LinkTitle,
+    Slogan,
+    SocialContainer,
+    SocialIconsContainer,
+} from "./styles";
 
 const Footer = () => {
     return (
-        <div>
-            <div className="contact">
+        <Wrapper>
+            <LinkList>
                 {contact.map((contactItem, index) => (
-                    <div key={index}>
-                        <div>{contactItem.icon}</div>
-                        <div>{contactItem.title}</div>
-                        <div>{contactItem.value}</div>
-                        <div>{contactItem.link}</div>
-                    </div>
+                    <LinkColumn key={index}>
+                        <LinkTitle>
+                            {contactItem.icon} {contactItem.title}
+                        </LinkTitle>
+                        <LinkItem href={contactItem.link}>
+                            <div>{contactItem.value}</div>
+                        </LinkItem>
+                    </LinkColumn>
                 ))}
-            </div>
-            <div className="social">
-                {social.map((socialItem, index) => (
-                    <div key={index}>
-                        <div>{socialItem.icon}</div>
-                        <div>{socialItem.title}</div>
-                        <div>{socialItem.link}</div>
-                    </div>
-                ))}
-            </div>
-            <SocialIcons />
-        </div>
+            </LinkList>
+            <SocialIconsContainer>
+                <CompanyContainer>
+                    <Slogan>Slogan</Slogan>
+                </CompanyContainer>
+                <SocialContainer>
+                    <SocialIcons />
+                </SocialContainer>
+            </SocialIconsContainer>
+        </Wrapper>
     );
 };
 
