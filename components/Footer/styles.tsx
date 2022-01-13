@@ -147,8 +147,9 @@ export const LinkTitle = styled.h4`
     font-weight: 600;
     font-size: 12px;
     line-height: 24px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: ${(props) => props.theme.colors.whites[400]};
+    color: ${(props) => props.theme.colors.whites[500]};
     margin-bottom: 16px;
     @media ${(props) => props.theme.breakpoints.sm} {
         font-size: 10px;
