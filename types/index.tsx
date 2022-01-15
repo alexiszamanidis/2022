@@ -68,3 +68,8 @@ export interface GitHubRepository {
     forks_count: number;
     html_url: string;
 }
+
+export interface Hobby {
+    title: string;
+    icon: JSX.Element;
+}

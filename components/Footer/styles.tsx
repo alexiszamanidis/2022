@@ -90,6 +90,9 @@ export const Slogan = styled.p`
     font-size: 18px;
     line-height: 30px;
     padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @media ${(props) => props.theme.breakpoints.md} {
         font-size: 16px;
         line-height: 28px;

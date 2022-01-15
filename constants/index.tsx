@@ -1,7 +1,8 @@
+import { CgGym } from "react-icons/cg";
 import { BsFileTextFill } from "react-icons/bs";
 import { HiPhone, HiMail } from "react-icons/hi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Contact, Education, Experience, Cv, Social } from "../types";
+import { FaGithub, FaLinkedin, FaBasketballBall } from "react-icons/fa";
+import { Contact, Education, Experience, Cv, Social, Hobby } from "../types";
 
 export const HEAD_TITLE = "Alexis Zamanidis";
 export const HEAD_DESCRIPTION =
@@ -100,5 +101,16 @@ export const experience: Experience[] = [
             "<span class='light-bold'>Calendar</span> to keep their appointments",
         ],
         link: null,
+    },
+];
+
+export const hobbies: Hobby[] = [
+    {
+        title: "Playing Football and Basketball",
+        icon: <FaBasketballBall />,
+    },
+    {
+        title: "Calisthenics Workout",
+        icon: <CgGym />,
     },
 ];

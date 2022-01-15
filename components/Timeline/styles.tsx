@@ -6,11 +6,11 @@ export const SectionTitle = styled.h2`
     justify-content: center;
     font-weight: 800;
     font-size: 65px;
-    line-height: 72px;
+    line-height: 120px;
     background: linear-gradient(
         121.57deg,
-        ${(props) => props.theme.colors.whites[1000]} 70%,
-        ${(props) => props.theme.colors.blacks[900]} 100%
+        ${(props) => props.theme.colors.whites[1000]} 30%,
+        ${(props) => props.theme.colors.blacks[900]} 90%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
