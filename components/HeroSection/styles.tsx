@@ -94,9 +94,27 @@ export const Button = styled.a`
     font-size: 20px;
     color: ${(props) => props.theme.colors.blacks[1000]};
     background: ${(props) => props.theme.colors.whites[1000]};
+    position: relative;
+    z-index: 1;
 
+    &:before {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: ${(props) => props.theme.colors.primary.background};
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform 300ms ease-in-out;
+        border-radius: 50px;
+    }
+    &:hover:before {
+        transform: scaleX(1);
+        border-radius: 50px;
+    }
     &:hover {
-        background: ${(props) => props.theme.colors.primary.background};
         color: ${(props) => props.theme.colors.whites[1000]};
         border: 1px solid ${(props) => props.theme.colors.whites[1000]};
         cursor: pointer;

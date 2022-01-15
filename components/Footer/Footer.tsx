@@ -1,5 +1,5 @@
 import SocialIcons from "../SocialIcons";
-import { contact } from "../../constants";
+import { contact, fullName } from "../../constants";
 import {
     CompanyContainer,
     Wrapper,
@@ -29,7 +29,7 @@ const Footer = () => {
             </LinkList>
             <SocialIconsContainer>
                 <CompanyContainer>
-                    <Slogan>Slogan</Slogan>
+                    <Slogan>{`© ${new Date().getFullYear()} Copyright: ${fullName}`}</Slogan>
                 </CompanyContainer>
                 <SocialContainer>
                     <SocialIcons />

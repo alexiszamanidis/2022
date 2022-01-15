@@ -84,7 +84,7 @@ export const CompanyContainer = styled.div`
 `;
 
 export const Slogan = styled.p`
-    color: ${(props) => props.theme.colors.whites[500]};
+    color: ${(props) => props.theme.colors.whites[1000]};
     min-width: 280px;
     letter-spacing: 0.02em;
     font-size: 18px;
