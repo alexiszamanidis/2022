@@ -13,19 +13,21 @@ const GitHubCard = ({
 }: GitHubRepository) => {
     return (
         <Wrapper>
-            <Name>{name}</Name>
-            <Description>{description}</Description>
-            <Details>
-                <Language>{`Language: ${language}`}</Language>
-                <Detail>
-                    <AiFillStar />
-                    {stargazers_count}
-                </Detail>
-                <Detail>
-                    <AiOutlineFork />
-                    {forks_count}
-                </Detail>
-            </Details>
+            <div>
+                <Name>{name}</Name>
+                <Description>{description}</Description>
+                <Details>
+                    <Language>{`Language: ${language}`}</Language>
+                    <Detail>
+                        <AiFillStar />
+                        {stargazers_count}
+                    </Detail>
+                    <Detail>
+                        <AiOutlineFork />
+                        {forks_count}
+                    </Detail>
+                </Details>
+            </div>
             <Button href={html_url}>View on GitHub</Button>
         </Wrapper>
     );
