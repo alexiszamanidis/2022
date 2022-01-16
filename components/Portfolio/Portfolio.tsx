@@ -1,10 +1,9 @@
 import { FadeIn } from "../Styles";
 import AlertBox from "../AlertBox";
-import GitHubCard from "../GitHubCard";
-import { GitHubRepository } from "../../types";
 import { githubUsername } from "../../constants";
 import { useGetUserRepositories } from "../../services/GitHubService";
-import { GitHubIconWrapper, GitHubRepositories, StyledGitHubIcon } from "./styles";
+import { GitHubIconWrapper, StyledGitHubIcon } from "./styles";
+import GitHubRepositories from "../GitHubRepositories";
 
 const Portfolio = () => {
     const { repositories, isLoading, isError } = useGetUserRepositories(githubUsername);
@@ -16,13 +15,7 @@ const Portfolio = () => {
             <GitHubIconWrapper loading={isLoading.toString()}>
                 <StyledGitHubIcon />
             </GitHubIconWrapper>
-            {!isLoading && (
-                <GitHubRepositories>
-                    {repositories.map((repository: GitHubRepository, index: number) => {
-                        return <GitHubCard key={index} {...repository} />;
-                    })}
-                </GitHubRepositories>
-            )}
+            {!isLoading && <GitHubRepositories repositories={repositories} />}
         </FadeIn>
     );
 };
