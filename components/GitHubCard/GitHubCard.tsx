@@ -1,5 +1,7 @@
 import { GitHubRepository } from "../../types";
-import { Wrapper } from "./styles";
+import Button from "../Button";
+import { Description, Detail, Details, Language, Name, Wrapper } from "./styles";
+import { AiFillStar, AiOutlineFork } from "react-icons/ai";
 
 const GitHubCard = ({
     name,
@@ -11,12 +13,20 @@ const GitHubCard = ({
 }: GitHubRepository) => {
     return (
         <Wrapper>
-            <div>{name}</div>
-            <div>{description}</div>
-            <div>{language}</div>
-            <div>{stargazers_count}</div>
-            <div>{forks_count}</div>
-            <div>{html_url}</div>
+            <Name>{name}</Name>
+            <Description>{description}</Description>
+            <Details>
+                <Language>{`Language: ${language}`}</Language>
+                <Detail>
+                    <AiFillStar />
+                    {stargazers_count}
+                </Detail>
+                <Detail>
+                    <AiOutlineFork />
+                    {forks_count}
+                </Detail>
+            </Details>
+            <Button href={html_url}>View on GitHub</Button>
         </Wrapper>
     );
 };

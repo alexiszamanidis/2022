@@ -18,7 +18,7 @@ const fetcher = async () => {
 
 const Portfolio = () => {
     const { data, error } = useSWR("/github/repos", fetcher);
-    console.log(data);
+
     if (error) return <div>failed to load</div>;
     if (!data) return <div>loading...</div>;
 

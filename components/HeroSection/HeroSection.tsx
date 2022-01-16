@@ -1,12 +1,13 @@
 import { fullName, summary, cv } from "../../constants";
-import { Wrapper, Title, Summary, Button, CvIcon } from "./styles";
+import Button from "../Button";
+import { Wrapper, Title, Summary, CvIcon } from "./styles";
 
 const HeroSection = () => {
     return (
         <Wrapper>
             <Title>Hi, my name is {fullName}</Title>
             <Summary>{summary}</Summary>
-            <Button target="_blank" rel="noopener" href={cv.link}>
+            <Button href={cv.link}>
                 <CvIcon>{cv.icon}</CvIcon>
                 <div>Resume</div>
             </Button>
