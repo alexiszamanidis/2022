@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     max-width: 1000px;
-    margin: 10px auto 0px;
+    margin: 35px auto 0px;
 
     @media ${(props) => props.theme.breakpoints.lg} {
         max-width: 700px;
@@ -48,7 +48,8 @@ export const Tab = styled.div<{ active?: boolean }>`
         props.active ? `1px solid ${props.theme.colors.whites[1000]}` : "none"};
     padding-bottom: 1px;
     &:hover {
-        color: ${(props) => props.theme.colors.whites[1000]};
+        color: ${(props) =>
+            props.active ? props.theme.colors.whites[1000] : props.theme.colors.primary.main};
         opacity: 1;
         cursor: pointer;
     }

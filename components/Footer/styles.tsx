@@ -88,6 +88,17 @@ export const CopyrightLink = styled.a`
         cursor: pointer;
         box-shadow: 0 14px 14px -16px rgb(255 233 35 / 20%);
     }
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: ${(props) => props.theme.colors.primary.main};
+        transition: width 0.3s;
+    }
+    &:hover::after {
+        width: 100%;
+    }
 `;
 
 export const SocialContainer = styled.div`
@@ -120,7 +131,7 @@ export const LinkList = styled.ul`
     @media ${(props) => props.theme.breakpoints.sm} {
         width: 100%;
         padding: 32px 4px 16px;
-        gap: 5px;
+        gap: 10px;
     }
 `;
 
