@@ -1,4 +1,4 @@
-import { CgGym } from "react-icons/cg";
+import { GiMuscleUp } from "react-icons/gi";
 import { BsFileTextFill } from "react-icons/bs";
 import { HiPhone, HiMail } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaBasketballBall } from "react-icons/fa";
@@ -112,6 +112,6 @@ export const hobbies: Hobby[] = [
     },
     {
         title: "Calisthenics Workout",
-        icon: <CgGym />,
+        icon: <GiMuscleUp />,
     },
 ];
