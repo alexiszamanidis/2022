@@ -17,7 +17,7 @@ export const Wrapper = styled.section`
 `;
 
 export const LinkItem = styled.a`
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
     color: ${(props) => props.theme.colors.whites[700]};
     margin-bottom: 16px;
@@ -26,26 +26,23 @@ export const LinkItem = styled.a`
     left: 0;
     &:hover {
         color: ${(props) => props.theme.colors.whites[1000]};
-        font-size: 20px;
     }
     @media ${(props) => props.theme.breakpoints.md} {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 28px;
         display: flex;
         &:hover {
             color: ${(props) => props.theme.colors.whites[1000]};
-            font-size: 18px;
         }
     }
     @media ${(props) => props.theme.breakpoints.sm} {
-        font-size: 10px;
+        font-size: 16px;
         line-height: 14px;
         margin-bottom: 8px;
         display: flex;
         align-items: center;
         &:hover {
             color: ${(props) => props.theme.colors.whites[1000]};
-            font-size: 12px;
         }
     }
 `;
@@ -83,7 +80,7 @@ export const CompanyContainer = styled.div`
     }
 `;
 
-export const Slogan = styled.p`
+export const Copyright = styled.p`
     color: ${(props) => props.theme.colors.whites[1000]};
     min-width: 280px;
     letter-spacing: 0.02em;
@@ -127,6 +124,9 @@ export const LinkList = styled.ul`
         width: 100%;
         padding: 32px 0 16px;
         gap: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     @media ${(props) => props.theme.breakpoints.sm} {
         width: 100%;
@@ -135,11 +135,14 @@ export const LinkList = styled.ul`
     }
 `;
 
-export const LinkColumn = styled.div`
+export const LinkColumn = styled.li`
     display: flex;
     flex-direction: column;
     max-width: 220px;
     width: 100%;
+    @media ${(props) => props.theme.breakpoints.md} {
+        align-items: center;
+    }
 `;
 
 export const LinkTitle = styled.h4`
@@ -148,14 +151,14 @@ export const LinkTitle = styled.h4`
     gap: 5px;
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 22px;
     line-height: 24px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: ${(props) => props.theme.colors.whites[500]};
     margin-bottom: 16px;
     @media ${(props) => props.theme.breakpoints.sm} {
-        font-size: 10px;
+        font-size: 17px;
         line-height: 12px;
         margin-bottom: 8px;
     }

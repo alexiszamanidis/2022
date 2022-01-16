@@ -22,10 +22,6 @@ export const SocialIcon = styled.a`
 
     @media ${(props) => props.theme.breakpoints.lg} {
         font-size: 3rem;
-    }
-
-    @media ${(props) => props.theme.breakpoints.sm} {
-        font-size: 2rem;
-        padding: 2px;
+        padding: 6px;
     }
 `;

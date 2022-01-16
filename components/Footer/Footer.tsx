@@ -7,9 +7,9 @@ import {
     LinkItem,
     LinkList,
     LinkTitle,
-    Slogan,
     SocialContainer,
     SocialIconsContainer,
+    Copyright,
 } from "./styles";
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
             </LinkList>
             <SocialIconsContainer>
                 <CompanyContainer>
-                    <Slogan>{`© ${new Date().getFullYear()} Copyright: ${fullName}`}</Slogan>
+                    <Copyright>{`© ${new Date().getFullYear()} Copyright: ${fullName}`}</Copyright>
                 </CompanyContainer>
                 <SocialContainer>
                     <SocialIcons />
