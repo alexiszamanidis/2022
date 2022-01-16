@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     }
 
     @media ${(props) => props.theme.breakpoints.sm} {
-        max-width: 350px;
+        width: 80%;
     }
 `;
 

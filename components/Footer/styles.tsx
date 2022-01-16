@@ -62,42 +62,31 @@ export const SocialIconsContainer = styled.div`
     }
 `;
 
-export const CompanyContainer = styled.div`
+export const CopyrightWrapper = styled.div`
     display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin-right: auto;
-
-    @media ${(props) => props.theme.breakpoints.md} {
-        flex-direction: column;
-        align-items: baseline;
-    }
-    @media ${(props) => props.theme.breakpoints.sm} {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 32px;
-        align-items: center;
-    }
-`;
-
-export const Copyright = styled.p`
-    color: ${(props) => props.theme.colors.whites[1000]};
-    min-width: 280px;
+    gap: 5px;
     letter-spacing: 0.02em;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
-    padding: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    @media ${(props) => props.theme.breakpoints.md} {
-        font-size: 16px;
-        line-height: 28px;
-    }
+`;
+
+export const Copyright = styled.div`
+    color: ${(props) => props.theme.colors.whites[700]};
+`;
+
+export const CopyrightLink = styled.a`
+    color: ${(props) => props.theme.colors.whites[700]};
+    font-size: 18px;
     @media ${(props) => props.theme.breakpoints.sm} {
-        line-height: 22px;
-        font-size: 14px;
-        min-width: 100px;
+        margin-bottom: 20px;
+    }
+    &:hover {
+        color: ${(props) => props.theme.colors.primary.main};
+        cursor: pointer;
+        box-shadow: 0 14px 14px -16px rgb(255 233 35 / 20%);
     }
 `;
 

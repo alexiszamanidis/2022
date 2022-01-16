@@ -10,7 +10,7 @@ export const SocialIcon = styled.a`
     display: flex;
     align-items: center;
     transition: 0.3s ease;
-    color: ${(props) => props.theme.colors.primary.main};
+    color: ${(props) => props.theme.colors.whites[1000]};
     border-radius: 50%;
     padding: 10px;
     &:hover {

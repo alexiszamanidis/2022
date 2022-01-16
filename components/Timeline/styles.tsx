@@ -75,7 +75,8 @@ export const TimeListItem = styled.li`
     border: 1px solid ${(props) => props.theme.colors.whites[500]};
 
     &:hover {
-        border: 1px solid ${(props) => props.theme.colors.whites[1000]};
+        border: 1px solid ${(props) => props.theme.colors.primary.main};
+        box-shadow: 0 14px 14px -16px rgb(255 233 35 / 20%);
     }
 
     @media only screen and (min-width: 768px) {
@@ -113,7 +114,7 @@ export const TimeListItem = styled.li`
             left: -30px;
         }
         &:hover::before {
-            background-color: ${(props) => props.theme.colors.whites[1000]};
+            border: 1px solid ${(props) => props.theme.colors.primary.main};
         }
     }
 `;

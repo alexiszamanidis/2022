@@ -16,7 +16,7 @@ ${normalize};
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
     background: ${(props) => props.theme.colors.primary.background};
-    color: ${(props) => props.theme.colors.primary.main};
+    color: ${(props) => props.theme.colors.whites[1000]};
     cursor: default;
   }
   a {

@@ -1,7 +1,6 @@
 import SocialIcons from "../SocialIcons";
-import { contact, fullName } from "../../constants";
+import { contact, copyrightLink, fullName } from "../../constants";
 import {
-    CompanyContainer,
     Wrapper,
     LinkColumn,
     LinkItem,
@@ -9,6 +8,8 @@ import {
     LinkTitle,
     SocialContainer,
     SocialIconsContainer,
+    CopyrightLink,
+    CopyrightWrapper,
     Copyright,
 } from "./styles";
 
@@ -28,9 +29,12 @@ const Footer = () => {
                 ))}
             </LinkList>
             <SocialIconsContainer>
-                <CompanyContainer>
-                    <Copyright>{`© ${new Date().getFullYear()} Copyright: ${fullName}`}</Copyright>
-                </CompanyContainer>
+                <CopyrightWrapper>
+                    <Copyright>{`© ${new Date().getFullYear()} Copyright:`}</Copyright>
+                    <CopyrightLink href={copyrightLink} target="_blank" rel="noopener">
+                        {fullName}
+                    </CopyrightLink>
+                </CopyrightWrapper>
                 <SocialContainer>
                     <SocialIcons />
                 </SocialContainer>

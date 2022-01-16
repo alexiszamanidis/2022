@@ -12,7 +12,8 @@ export const Wrapper = styled.div`
     border: 1px solid ${(props) => props.theme.colors.whites[500]};
 
     &:hover {
-        border: 1px solid ${(props) => props.theme.colors.whites[1000]};
+        border: 1px solid ${(props) => props.theme.colors.primary.main};
+        box-shadow: 0 14px 14px -16px rgb(255 233 35 / 20%);
     }
 
     @media ${(props) => props.theme.breakpoints.sm} {

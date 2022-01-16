@@ -14,6 +14,7 @@ export const fullName = "Alexis Zamanidis";
 export const location = "Athens, Greece";
 export const birthDate = "1998-01-20";
 export const githubUsername = "alexiszamanidis";
+export const copyrightLink = "https://github.com/alexiszamanidis";
 
 export const summary =
     "I am a Software Engineer with an emphasis on web technologies. I love working with all layers of the stack and I \
