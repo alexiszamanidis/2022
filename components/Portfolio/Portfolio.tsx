@@ -1,32 +1,22 @@
-import useSWR from "swr";
 import { FadeIn } from "../Styles";
+import AlertBox from "../AlertBox";
 import GitHubCard from "../GitHubCard";
-import { githubUsername } from "../../constants";
-import { GitHubRepository } from "../../types";
 import { GitHubRepositories } from "./styles";
-
-const fetcher = async () => {
-    const response = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
-    const repositories = await response.json();
-    // TODO: create an array of keys that we need to destructure from the response
-    const formattedRepositories = repositories.map((repo: GitHubRepository) => {
-        const { id, name, description, language, stargazers_count, forks_count, html_url } = repo;
-        return { id, name, description, language, stargazers_count, forks_count, html_url };
-    });
-    return formattedRepositories;
-};
+import { GitHubRepository } from "../../types";
+import { githubUsername } from "../../constants";
+import { useGetUserRepositories } from "../../services/GitHubService";
 
 const Portfolio = () => {
-    const { data, error } = useSWR("/github/repos", fetcher);
+    const { repositories, isLoading, isError } = useGetUserRepositories(githubUsername);
 
-    if (error) return <div>failed to load</div>;
-    if (!data) return <div>loading...</div>;
+    if (isError) return <AlertBox>Failed to fetch the repositories...</AlertBox>;
+    if (isLoading) return <div>loading...</div>;
 
     return (
         <FadeIn>
             <GitHubRepositories>
-                {data.map((repo: GitHubRepository, index: number) => {
-                    return <GitHubCard key={index} {...repo} />;
+                {repositories.map((repository: GitHubRepository, index: number) => {
+                    return <GitHubCard key={index} {...repository} />;
                 })}
             </GitHubRepositories>
         </FadeIn>

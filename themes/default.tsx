@@ -12,6 +12,11 @@ const defaultTheme: DefaultTheme = {
         secondary: {
             background: "#17191f",
         },
+        error: {
+            main: "#d32f2f",
+            light: "#ef5350",
+            dark: "#c62828",
+        },
         whites: {
             100: "rgba(255, 255, 255, 0.1)",
             200: "rgba(255, 255, 255, 0.2)",
