@@ -85,6 +85,7 @@ export const Details = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 10px;
 `;
 
 export const Detail = styled.div`
