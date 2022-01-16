@@ -1,7 +1,9 @@
 import useSWR from "swr";
 import { FadeIn } from "../Styles";
+import GitHubCard from "../GitHubCard";
 import { githubUsername } from "../../constants";
 import { GitHubRepository } from "../../types";
+import { GitHubRepositories } from "./styles";
 
 const fetcher = async () => {
     const response = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
@@ -20,7 +22,15 @@ const Portfolio = () => {
     if (error) return <div>failed to load</div>;
     if (!data) return <div>loading...</div>;
 
-    return <FadeIn>Portfolio</FadeIn>;
+    return (
+        <FadeIn>
+            <GitHubRepositories>
+                {data.map((repo: GitHubRepository, index: number) => {
+                    return <GitHubCard key={index} {...repo} />;
+                })}
+            </GitHubRepositories>
+        </FadeIn>
+    );
 };
 
 export default Portfolio;
