@@ -1,5 +1,6 @@
+import { assetsPrefix } from "../../constants";
 import { useTabsContext } from "../../contexts/TabsContext";
-import { Wrapper, StyledIcon, TabsWrapper, Tab } from "./styles";
+import { Wrapper, TabsWrapper, Tab, Logo } from "./styles";
 
 const Header = () => {
     const { tabs, activeTab, setActiveTab } = useTabsContext();
@@ -10,7 +11,7 @@ const Header = () => {
 
     return (
         <Wrapper>
-            <StyledIcon />
+            <Logo src={`${assetsPrefix}/logo.png`} alt="Alexis Zamanidis Logo" />
             <TabsWrapper>
                 {tabs.map((tab) => {
                     return (

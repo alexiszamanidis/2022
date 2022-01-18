@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     max-width: 1000px;
     margin: 35px auto 0px;
+    gap: 10px;
 
     @media ${(props) => props.theme.breakpoints.lg} {
         max-width: 700px;
@@ -61,4 +62,9 @@ export const Tab = styled.div<{ active?: boolean }>`
         font-size: 1.5rem;
         line-height: 20px;
     }
+`;
+
+export const Logo = styled.img`
+    max-width: 80px;
+    max-height: 60px;
 `;

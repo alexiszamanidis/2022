@@ -25,15 +25,12 @@ export const LinkItem = styled.a`
     position: relative;
     left: 0;
     &:hover {
-        color: ${(props) => props.theme.colors.whites[1000]};
+        color: ${(props) => props.theme.colors.primary.main};
     }
     @media ${(props) => props.theme.breakpoints.md} {
         font-size: 18px;
         line-height: 28px;
         display: flex;
-        &:hover {
-            color: ${(props) => props.theme.colors.whites[1000]};
-        }
     }
     @media ${(props) => props.theme.breakpoints.sm} {
         font-size: 16px;
@@ -41,9 +38,6 @@ export const LinkItem = styled.a`
         margin-bottom: 8px;
         display: flex;
         align-items: center;
-        &:hover {
-            color: ${(props) => props.theme.colors.whites[1000]};
-        }
     }
 `;
 
@@ -145,7 +139,7 @@ export const LinkColumn = styled.li`
     }
 `;
 
-export const LinkTitle = styled.h4`
+export const LinkTitle = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;

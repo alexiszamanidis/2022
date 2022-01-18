@@ -4,6 +4,8 @@ import { HiPhone, HiMail } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaBasketballBall } from "react-icons/fa";
 import { Contact, Education, Experience, Cv, Social, Hobby } from "../types";
 
+export const assetsPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const HEAD_TITLE = "Alexis Zamanidis";
 export const HEAD_DESCRIPTION =
     "A Portfolio Web page developed using Next.JS, TypeScript and Styled-Components";
@@ -107,7 +109,7 @@ export const experience: Experience[] = [
 
 export const hobbies: Hobby[] = [
     {
-        title: "Playing Football and Basketball",
+        title: "Football and Basketball",
         icon: <FaBasketballBall />,
     },
     {

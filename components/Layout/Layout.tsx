@@ -20,7 +20,7 @@ const Layout = ({
     children,
 }: LayoutProps) => {
     return (
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,11 @@ const Layout = ({
                 /> */}
             </Head>
             <div>{children}</div>
-            {footer && <Footer />}
+            {footer && (
+                <div style={{ marginTop: "auto" }}>
+                    <Footer />
+                </div>
+            )}
         </div>
     );
 };
