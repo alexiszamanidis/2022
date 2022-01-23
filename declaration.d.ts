@@ -13,6 +13,7 @@ declare module "styled-components" {
             };
             secondary: {
                 background: string;
+                main: string;
             };
             error: {
                 main: string;

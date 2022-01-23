@@ -11,6 +11,7 @@ const defaultTheme: DefaultTheme = {
         },
         secondary: {
             background: "#17191f",
+            main: "#d74cf6",
         },
         error: {
             main: "#d32f2f",

@@ -50,7 +50,7 @@ export const Tab = styled.div<{ active?: boolean }>`
     padding-bottom: 1px;
     &:hover {
         color: ${(props) =>
-            props.active ? props.theme.colors.whites[1000] : props.theme.colors.primary.main};
+            props.active ? props.theme.colors.secondary.main : props.theme.colors.primary.main};
         opacity: 1;
         cursor: pointer;
     }
