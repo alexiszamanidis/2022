@@ -56,7 +56,7 @@ export const lightTheme: DefaultTheme = {
     colors: {
         primary: {
             background: "rgba(255, 255, 255)",
-            main: "#d74cf6",
+            main: "#f6a74c",
         },
         secondary: {
             background: "rgba(255, 255, 255)",

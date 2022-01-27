@@ -76,7 +76,7 @@ export const TimeListItem = styled.li`
 
     &:hover {
         border: 1px solid ${(props) => props.theme.colors.primary.main};
-        box-shadow: 0 14px 14px -16px rgb(255 233 35 / 20%);
+        box-shadow: 0 14px 14px -16px ${(props) => props.theme.colors.primary.main};
     }
 
     @media only screen and (min-width: 768px) {
