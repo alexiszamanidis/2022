@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-const defaultTheme: DefaultTheme = {
+export const darkTheme: DefaultTheme = {
     fonts: {
         main: "Space Grotesk, sans-serif",
     },
@@ -51,4 +51,23 @@ const defaultTheme: DefaultTheme = {
     },
 };
 
-export default defaultTheme;
+export const lightTheme: DefaultTheme = {
+    ...darkTheme,
+    colors: {
+        primary: {
+            background: "rgba(255, 255, 255)",
+            main: "#d74cf6",
+        },
+        secondary: {
+            background: "rgba(255, 255, 255)",
+            main: "#ffe923",
+        },
+        error: {
+            main: "#d32f2f",
+            light: "#ef5350",
+            dark: "#c62828",
+        },
+        whites: darkTheme.colors.blacks,
+        blacks: darkTheme.colors.whites,
+    },
+};

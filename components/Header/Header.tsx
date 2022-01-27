@@ -1,17 +1,22 @@
-import { assetsPrefix } from "../../constants";
 import { useTabsContext } from "../../contexts/TabsContext";
-import { Wrapper, TabsWrapper, Tab, Logo } from "./styles";
+import { Wrapper, TabsWrapper, Tab, LightDark } from "./styles";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import { useLightDarkModeContext } from "../../contexts/LightDarkModeContext";
 
 const Header = () => {
     const { tabs, activeTab, setActiveTab } = useTabsContext();
+    const { isDarkMode, setIsDarkMode } = useLightDarkModeContext();
 
     const onTabClick = (tabValue: number) => () => {
         setActiveTab(tabValue);
     };
 
+    const onThemeClick = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
     return (
         <Wrapper>
-            <Logo src={`${assetsPrefix}/logo.png`} alt="Alexis Zamanidis Logo" />
             <TabsWrapper>
                 {tabs.map((tab) => {
                     return (
@@ -25,6 +30,9 @@ const Header = () => {
                     );
                 })}
             </TabsWrapper>
+            <LightDark onClick={onThemeClick}>
+                {isDarkMode ? <BsFillSunFill /> : <BsFillMoonFill />}
+            </LightDark>
         </Wrapper>
     );
 };
