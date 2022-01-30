@@ -5,14 +5,10 @@ import { useLightDarkModeContext } from "../../contexts/LightDarkModeContext";
 
 const Header = () => {
     const { tabs, activeTab, setActiveTab } = useTabsContext();
-    const { isDarkMode, setIsDarkMode } = useLightDarkModeContext();
+    const { isDarkMode, handleIsDarkModeChange } = useLightDarkModeContext();
 
     const onTabClick = (tabValue: number) => () => {
         setActiveTab(tabValue);
-    };
-
-    const onThemeClick = () => {
-        setIsDarkMode(!isDarkMode);
     };
 
     return (
@@ -30,7 +26,7 @@ const Header = () => {
                     );
                 })}
             </TabsWrapper>
-            <LightDark onClick={onThemeClick}>
+            <LightDark onClick={handleIsDarkModeChange}>
                 {isDarkMode ? <BsFillSunFill /> : <BsFillMoonFill />}
             </LightDark>
         </Wrapper>
