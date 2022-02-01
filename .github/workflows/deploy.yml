@@ -27,14 +27,14 @@ jobs:
               run: yarn build
               # TODO: remove this env
               env:
-                  NEXT_PUBLIC_BASE_PATH: /new-portfolio
+                  NEXT_PUBLIC_BASE_PATH: /2022
             - run: yarn export
 
             - run: touch ./out/.nojekyll
 
               # TODO: remove this env
               env:
-                  NEXT_PUBLIC_BASE_PATH: /new-portfolio
+                  NEXT_PUBLIC_BASE_PATH: /2022
             - run: yarn test -- --watchAll=false
 
             - name: Set Actions Allow Unsecure Commands
