@@ -5,6 +5,12 @@ import Personal from "../components/Personal";
 import Portfolio from "../components/Portfolio";
 import { useTabsContext } from "../contexts/TabsContext";
 
+const a = {foo: "foot"};
+
+a.bar = {};
+
+a.bar = {}
+
 const Home = () => {
     const { activeTab } = useTabsContext();
 
