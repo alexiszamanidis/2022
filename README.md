@@ -1,6 +1,20 @@
 ## ALEXISZAMANIDIS.GITHUB.IO
 
-A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Components. It is deployed with GitHub pages and uses GitHub REST API to fetch my Personal Data and my Projects.
+A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Components. A well-structured project for use by anyone.
+
+## Benefits
+
+-   Easy to use
+-   Easy to setup
+-   Configurable
+-   Includes everything a big project needs
+    -   Husky
+    -   Prettier
+    -   ESLint
+    -   Lint Staged
+    -   TypeScript
+    -   Testing
+    -   CI/CD
 
 ### Create your own
 
@@ -9,7 +23,9 @@ A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Comp
 -   Install the dependencies: `yarn`
 -   Run the application locally: `yarn dev`
 -   Configure the files listed below to your personal preferences(Of course you can configure any file but these are the most useful ones)
+    -   The `react-icons` package has been installed, so if you want to import a new icon or a different one, you can search [here](https://react-icons.github.io/react-icons/search)
 -   Change the `NEXT_PUBLIC_BASE_PATH` env variable to your repository name
+    -   The `NEXT_PUBLIC_BASE_PATH` has been defined in the `.github/workflows/deploy.yml` file
 -   Push it to your GitHub account
 -   Go to your repository on Github -> Settings -> Pages
     -   Select `gh-pages` for your branch
