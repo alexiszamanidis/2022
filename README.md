@@ -5,6 +5,8 @@ A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Comp
 ### Create your own
 
 -   Clone the repository
+-   Move into the repository
+-   Install the dependencies: `yarn`
 -   Run the application locally: `yarn dev`
 -   Configure the files listed below to your personal preferences(Of course you can configure any file but these are the most useful ones)
 -   Change the `NEXT_PUBLIC_BASE_PATH` env variable to your repository name
