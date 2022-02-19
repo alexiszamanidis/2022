@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+yarn install
+code .
+clear
+yarn dev
