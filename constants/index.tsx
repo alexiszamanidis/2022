@@ -4,6 +4,9 @@ import { HiPhone, HiMail } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaBasketballBall } from "react-icons/fa";
 import { Contact, Education, Experience, Cv, Social, Hobby } from "../types";
 
+// 15 minutes
+export const swrCacheTime = 1000 * 15 * 60;
+
 export const assetsPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const HEAD_TITLE = "Alexis Zamanidis";
