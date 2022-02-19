@@ -83,12 +83,12 @@ export const experience: Experience[] = [
         company: "Upstream",
         location: "Athens, Greece",
         typeOfEmployee: "Remote Full-Time",
-        description:
-            "I have become a member of the Plan Migration team, which is a subgroup of GUI",
+        description: "I have become a member of the GUI team",
         details: [
-            "<span class='light-bold'>Developing and Maintaining</span> the websites of TIM and OI, which are Brazil’s <span class='light-bold'>mobile network operators</span>",
-            "<span class='light-bold'>Total Overhaul</span> of the TIM website",
-            "Implementing <span class='light-bold'>reusable components</span> for the <span class='light-bold'>company’s core component library</span>",
+            "Developing and Maintaining the website of Grow Measure, which provides statistics for customer users",
+            "Developing and Maintaining the websites of TIM and OI, which are Brazil’s mobile network operators",
+            "Total Overhaul of the TIM website",
+            "Implementing reusable components for the company’s core component library",
         ],
         link: null,
     },
@@ -102,9 +102,9 @@ export const experience: Experience[] = [
         description:
             "I was given to implement a RESTful Web App that will help Doctors in their daily work",
         details: [
-            "<span class='light-bold'>Fully integrated System with IDIKA</span>, which is the <span class='light-bold'>Provider of e-Prescription in Greece</span>",
-            "<span class='light-bold'>Automated</span> Visits, Referrals and Prescriptions for their Patients",
-            "<span class='light-bold'>Calendar</span> to keep their appointments",
+            "Fully integrated System with IDIKA, which is the Provider of e-Prescription in Greece",
+            "Automated Visits, Referrals and Prescriptions for their Patients",
+            "Calendar to keep their appointments",
         ],
         link: null,
     },
