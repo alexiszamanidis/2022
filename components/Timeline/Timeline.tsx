@@ -32,9 +32,7 @@ const Timeline = () => {
                                             return (
                                                 <Detail key={index}>
                                                     <div>○</div>
-                                                    <div
-                                                        dangerouslySetInnerHTML={{ __html: detail }}
-                                                    ></div>
+                                                    <div>{detail}</div>
                                                 </Detail>
                                             );
                                         })}
