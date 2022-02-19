@@ -15,6 +15,8 @@ A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Comp
     -   TypeScript
     -   Testing
     -   CI/CD
+-   Keeps dependencies up to date
+    -   Dependabot
 
 ### Create your own
 
