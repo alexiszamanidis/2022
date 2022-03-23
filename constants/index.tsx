@@ -95,7 +95,7 @@ export const experience: Experience[] = [
     {
         from: "Oct 2020",
         to: "Apr 2021",
-        jobTitle: "Software Engineer, Intern",
+        jobTitle: "Software Engineer",
         company: "ITML",
         location: "Athens, Greece",
         typeOfEmployee: "Remote Full-Time",
