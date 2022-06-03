@@ -48,5 +48,3 @@ A minimal Portfolio Web page developed using Next.js, TypeScript and Styled-Comp
 -   `install`
 
     This script will install the dependencies and run the application
-
-    I combine this script with the [zsh-git-fzf](https://github.com/alexiszamanidis/zsh-git-fzf) plugin and [git worktrees](https://git-scm.com/docs/git-worktree) to be a more efficient and productive while I am working
