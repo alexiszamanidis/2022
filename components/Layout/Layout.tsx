@@ -30,6 +30,16 @@ const Layout = ({
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keyword" content={keywords} />
+                <meta name="twitter:card" content="summary" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Alexis Zamanidis" />
+                <meta property="og:description" content={description} />
+                <meta
+                    property="og:image"
+                    content="https://avatars.githubusercontent.com/u/48658768?v=4"
+                />
+                <meta property="og:url" content="https://alexiszamanidis.github.io/2022" />
+
                 <link rel="shortcut icon" href={favicon.src} />
                 {/* TODO: uncomment google-site-verification */}
                 {/* <meta
