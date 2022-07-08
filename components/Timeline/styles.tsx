@@ -1,4 +1,13 @@
 import styled from "styled-components";
+import { AiOutlineLink } from "react-icons/ai";
+
+export const LinkIcon = styled(AiOutlineLink)`
+    color: ${(props) => props.theme.colors.whites[1000]};
+    :hover {
+        cursor: pointer;
+        color: ${(props) => props.theme.colors.primary.main};
+    }
+`;
 
 export const SectionTitle = styled.h2`
     display: flex;
@@ -120,14 +129,20 @@ export const TimeListItem = styled.li`
 `;
 
 export const Title = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
     @media ${(props) => props.theme.breakpoints.md} {
         font-size: 23px;
+        gap: 5px;
     }
     @media ${(props) => props.theme.breakpoints.sm} {
-        font-size: 20px;
+        font-size: 18px;
+        gap: 5px;
     }
 `;
 

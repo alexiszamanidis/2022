@@ -10,10 +10,15 @@ import {
     Details,
     Detail,
     SectionTitle,
+    LinkIcon,
 } from "./styles";
 import { experience } from "../../constants";
 
 const Timeline = () => {
+    const onLinkClick = (link: string) => () => {
+        window.open(link);
+    };
+
     return (
         <div>
             <SectionTitle>Experience</SectionTitle>
@@ -24,7 +29,14 @@ const Timeline = () => {
                             return (
                                 <TimeListItem key={index}>
                                     <Date>{`${experienceItem.from} - ${experienceItem.to}`}</Date>
-                                    <Title>{`${experienceItem.jobTitle} | ${experienceItem.company}`}</Title>
+                                    <Title>
+                                        <>
+                                            {`${experienceItem.jobTitle} | ${experienceItem.company}`}
+                                        </>
+                                        {experienceItem.link && (
+                                            <LinkIcon onClick={onLinkClick(experienceItem.link)} />
+                                        )}
+                                    </Title>
                                     <Subtitle>{`${experienceItem.location} - ${experienceItem.typeOfEmployee}`}</Subtitle>
                                     <Description>{experienceItem.description}</Description>
                                     <Details>
