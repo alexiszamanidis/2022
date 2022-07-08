@@ -78,19 +78,22 @@ export const education: Education[] = [
 export const experience: Experience[] = [
     {
         from: "Jul 2021",
-        to: "Present",
+        to: "Jul 2022",
         jobTitle: "Software Engineer",
         company: "Upstream",
         location: "Athens, Greece",
         typeOfEmployee: "Remote Full-Time",
-        description: "I have become a member of the GUI team",
+        description:
+            "I was responsible for developing and maintaining the Plan Migration, Grow Measure and Track services",
         details: [
-            "Developing and Maintaining the website of Grow Measure, which provides statistics for customer users",
-            "Developing and Maintaining the websites of TIM and OI, which are Brazil’s mobile network operators",
-            "Total Overhaul of the TIM website",
-            "Implementing reusable components for the company’s core component library",
+            "Investigated the architectural design of Plan Migration using Lerna, yarn workspaces and Monorepos, so that it can be scalable and maintainable as the number of MNOs increases",
+            "Participated in the total overhaul of the TIM website",
+            "Set up the new Grow Track service",
+            "Implemented reusable components for the company’s core component library",
+            "Paired programming with 2 interns and taught them the apps-domain, Git workflow, use of Memcached and Docker",
+            "Presented application features to colleagues and recorded them for the future team members",
         ],
-        link: null,
+        link: "https://www.upstreamsystems.com/",
     },
     {
         from: "Oct 2020",
@@ -106,7 +109,7 @@ export const experience: Experience[] = [
             "Automated Visits, Referrals and Prescriptions for their Patients",
             "Calendar to keep their appointments",
         ],
-        link: null,
+        link: "https://itml.gr/",
     },
 ];
 
