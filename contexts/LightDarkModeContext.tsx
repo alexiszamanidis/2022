@@ -20,7 +20,7 @@ interface LightDarkModeProviderProps {
     children: ReactNode;
 }
 
-const themeLocalStorageKey = "theme-mode";
+const themeLocalStorageKey = "isDarkMode";
 
 export const LightDarkModeProvider = ({ children }: LightDarkModeProviderProps) => {
     const [isDarkMode, setIsDarkMode] = useState(true);
