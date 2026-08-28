@@ -6,44 +6,54 @@ on:
     pull_request:
         branches: [master]
 
+permissions:
+    contents: write
+    pages: write
+
 jobs:
     build:
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [14.x]
+        env:
+            NEXT_PUBLIC_BASE_PATH: /2022
+            NODE_OPTIONS: --openssl-legacy-provider
 
         steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v2
+            - uses: actions/checkout@v4
+
+            - name: Use Node.js 20
+              uses: actions/setup-node@v4
               with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "yarn"
+                  node-version: 20
+                  cache: yarn
+
             - run: yarn
 
-            - name: Build my App
-              run: yarn build
-              # TODO: remove this env
-              env:
-                  NEXT_PUBLIC_BASE_PATH: /2022
-            - run: yarn export
+            - run: yarn jest --watchAll=false --ci
 
-            - run: touch ./out/.nojekyll
-
-              # TODO: remove this env
-              env:
-                  NEXT_PUBLIC_BASE_PATH: /2022
-            - run: yarn test -- --watchAll=false
-
-            - name: Set Actions Allow Unsecure Commands
+            # next export cannot include API routes; this stub is unused in the static site
+            - name: Build and export static site
               run: |
-                  echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
+                  rm -rf pages/api
+                  yarn build
+                  yarn export
+                  touch ./out/.nojekyll
 
             - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@3.5.9
+              if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: gh-pages # The branch the action should deploy to.
-                  FOLDER: out # The folder the action should deploy.
+                  branch: gh-pages
+                  folder: out
+
+            - name: Enable GitHub Pages
+              if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh api --method POST \
+                    -H "Accept: application/vnd.github+json" \
+                    /repos/${{ github.repository }}/pages \
+                    -f build_type=legacy \
+                    -f source[branch]=gh-pages \
+                    -f source[path]=/ || true
